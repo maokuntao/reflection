@@ -33,16 +33,15 @@ public class MyObject extends MyBase implements MyInterface1 , MyInterface2{
 	}
 
 	@Override
-	public void method1() {
+	public void method2() {
 		System.out.println("execute com.taomk.study.reflection.target.MyObject.method1() ...");
 	}
 
 	@Override
-	public boolean method2(String flag) {
+	public boolean method1(String flag) {
 		System.out.println("execute com.taomk.study.reflection.target.MyObject.method2(String) ...");
 		return flag.equals("Y")?true:false;
 	}
-	
 	
 	
 	@Override

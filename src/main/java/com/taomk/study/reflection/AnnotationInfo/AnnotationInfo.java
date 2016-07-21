@@ -8,7 +8,7 @@ import java.lang.annotation.Annotation;
 import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * �������ע����Ϣ
+ * 获取注解信息
  * @author taomk
  *
  */

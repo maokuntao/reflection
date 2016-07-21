@@ -6,7 +6,7 @@ package com.taomk.study.reflection.SuperClass;
 import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ���ظ�����Ϣ
+ * 获取父类信息
  * @author taomk
  *
  */

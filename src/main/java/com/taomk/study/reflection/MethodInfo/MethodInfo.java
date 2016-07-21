@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ���ط�����Ϣ
  * @author taomk
  *
  */

@@ -4,11 +4,11 @@
 package com.taomk.study.reflection.TargetObject;
 
 /**
- * ʾ��ӿ�2
+ * 接口1
  * @author taomk
  *
  */
 public interface MyInterface1 {
 
-	boolean method2(String flag);
+	boolean method1(String flag);
 }

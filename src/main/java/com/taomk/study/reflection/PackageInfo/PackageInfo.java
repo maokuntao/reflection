@@ -6,7 +6,7 @@ package com.taomk.study.reflection.PackageInfo;
 import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ����Ϣ
+ * 获取包信息
  * @author taomk
  *
  */

@@ -4,7 +4,7 @@
 package com.taomk.study.reflection.TargetObject;
 
 /**
- * ����
+ * 基础父类
  * 
  * @author taomk
  *

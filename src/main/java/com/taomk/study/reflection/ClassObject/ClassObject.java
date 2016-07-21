@@ -1,5 +1,5 @@
 /**
- * �ڼ��һ�������Ϣ֮ǰ��������Ҫ��ȡ���Class����
+ * 获取类信息
  */
 package com.taomk.study.reflection.ClassObject;
 

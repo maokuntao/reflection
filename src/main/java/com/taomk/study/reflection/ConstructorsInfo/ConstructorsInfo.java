@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ���ع�������Ϣ
+ * 获取构造器信息
  * 
  * @author taomk
  *
@@ -20,16 +20,11 @@ public class ConstructorsInfo {
 
 		Class<MyObject> myObjectClass = MyObject.class;
 
-		System.out.println("__________________���췽����Ϣ������_______________________");
-		
-		// ����ÿһ������Ϊ���еģ�public�����췽����
 		Constructor<?>[] constructors = myObjectClass.getConstructors();
 		for (Constructor<?> constructor : constructors) {
 			System.out.println(constructor.toGenericString());
 		}
 
-		System.out.println("__________________���췽����Ϣ����ݲ�����ض�����_______________________");
-		
 		Constructor<?> constructorWithParam = null;
 		try {
 			constructorWithParam = myObjectClass.getConstructor(new Class[] { String.class, String.class });
@@ -39,14 +34,10 @@ public class ConstructorsInfo {
 			e.printStackTrace();
 		}
 
-		System.out.println("__________________���췽��������Ϣ��_______________________");
-		
 		Class<?>[] parameterTypes = constructorWithParam.getParameterTypes();
 		for (Class<?> parameterType : parameterTypes) {
 			System.out.println(parameterType.getName());
 		}
-		
-		System.out.println("__________________����һ��ʵ��_______________________");
 		
 		try {
 			MyObject obj = (MyObject) constructorWithParam.newInstance("yonyou" , " 4 test");

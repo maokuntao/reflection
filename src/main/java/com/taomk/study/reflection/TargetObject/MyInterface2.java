@@ -4,11 +4,11 @@
 package com.taomk.study.reflection.TargetObject;
 
 /**
- * ʾ��ӿ�1
+ * 接口2
  * @author taomk
  *
  */
 public interface MyInterface2 {
 
-	void method1();
+	void method2();
 }
