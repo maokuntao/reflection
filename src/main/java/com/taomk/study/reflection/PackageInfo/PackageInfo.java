@@ -3,10 +3,10 @@
  */
 package com.taomk.study.reflection.PackageInfo;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * 包信息
+ * 锟斤拷锟斤拷息
  * @author taomk
  *
  */

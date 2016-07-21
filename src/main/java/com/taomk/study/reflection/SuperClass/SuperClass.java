@@ -3,10 +3,10 @@
  */
 package com.taomk.study.reflection.SuperClass;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ·µ»Ø¸¸ÀàÐÅÏ¢
+ * ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
  * @author taomk
  *
  */

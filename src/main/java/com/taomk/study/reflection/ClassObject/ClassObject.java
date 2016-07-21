@@ -1,9 +1,9 @@
 /**
- * 在检查一个类的信息之前，首先需要获取类的Class对象。
+ * 锟节硷拷锟揭伙拷锟斤拷锟斤拷锟斤拷息之前锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷取锟斤拷锟紺lass锟斤拷锟斤拷
  */
 package com.taomk.study.reflection.ClassObject;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
  * @author taomk

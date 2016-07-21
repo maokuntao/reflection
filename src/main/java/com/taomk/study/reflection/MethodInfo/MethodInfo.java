@@ -5,10 +5,10 @@ package com.taomk.study.reflection.MethodInfo;
 
 import java.lang.reflect.Method;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ·µ»Ø·½·¨ÐÅÏ¢
+ * ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
  * @author taomk
  *
  */

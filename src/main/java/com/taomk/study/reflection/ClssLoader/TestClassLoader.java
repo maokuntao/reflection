@@ -10,10 +10,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import com.taomk.study.reflection.target.MyInterface1;
+import com.taomk.study.reflection.TargetObject.MyInterface1;
 
 /**
- * ×Ô¼ºÊµÏÖÀàµÄ¶¯Ì¬ÔØÈë
+ * ï¿½Ô¼ï¿½Êµï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
  * @author taomk
  *
  */
@@ -23,8 +23,8 @@ public class TestClassLoader extends ClassLoader{
 	private String name = null;
 	
 	/**
-	 * @param name String ÀàÈ«Ãû
-	 * @param url URL ÀàÂ·¾¶
+	 * @param name String ï¿½ï¿½È«ï¿½ï¿½
+	 * @param url URL ï¿½ï¿½Â·ï¿½ï¿½
 	 * @throws IOException 
 	 */
 	public TestClassLoader(String name, URL url) throws IOException{
@@ -50,7 +50,7 @@ public class TestClassLoader extends ClassLoader{
 	}
 	
 	/**
-	 * ·µ»Ø¸ÃÀàµÄÎÄ¼þÁ÷
+	 * ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 	 * @param resourcesName 
 	 * @return an InputStream of the Class Bytes , or null
 	 */

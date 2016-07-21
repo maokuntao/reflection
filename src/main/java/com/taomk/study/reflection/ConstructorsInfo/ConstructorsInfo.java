@@ -6,10 +6,10 @@ package com.taomk.study.reflection.ConstructorsInfo;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ·µ»Ø¹¹ÔìÆ÷ÐÅÏ¢
+ * ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
  * 
  * @author taomk
  *
@@ -20,15 +20,15 @@ public class ConstructorsInfo {
 
 		Class<MyObject> myObjectClass = MyObject.class;
 
-		System.out.println("__________________¹¹Ôì·½·¨ÐÅÏ¢£¨±éÀú£©£º_______________________");
+		System.out.println("__________________ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_______________________");
 		
-		// ·µ»ØÃ¿Ò»¸öÉùÃ÷Îª¹«ÓÐµÄ£¨public£©¹¹Ôì·½·¨¡£
+		// ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ÐµÄ£ï¿½publicï¿½ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½
 		Constructor<?>[] constructors = myObjectClass.getConstructors();
 		for (Constructor<?> constructor : constructors) {
 			System.out.println(constructor.toGenericString());
 		}
 
-		System.out.println("__________________¹¹Ôì·½·¨ÐÅÏ¢£¨¸ù¾Ý²ÎÊý·µ»ØÌØ¶¨£©£º_______________________");
+		System.out.println("__________________ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½_______________________");
 		
 		Constructor<?> constructorWithParam = null;
 		try {
@@ -39,14 +39,14 @@ public class ConstructorsInfo {
 			e.printStackTrace();
 		}
 
-		System.out.println("__________________¹¹Ôì·½·¨²ÎÊýÐÅÏ¢£º_______________________");
+		System.out.println("__________________ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½_______________________");
 		
 		Class<?>[] parameterTypes = constructorWithParam.getParameterTypes();
 		for (Class<?> parameterType : parameterTypes) {
 			System.out.println(parameterType.getName());
 		}
 		
-		System.out.println("__________________´´½¨Ò»¸öÊµÀý£º_______________________");
+		System.out.println("__________________ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Êµï¿½ï¿½_______________________");
 		
 		try {
 			MyObject obj = (MyObject) constructorWithParam.newInstance("yonyou" , " 4 test");

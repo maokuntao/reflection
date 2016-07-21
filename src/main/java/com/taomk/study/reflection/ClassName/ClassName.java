@@ -1,6 +1,6 @@
 package com.taomk.study.reflection.ClassName;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 public class ClassName {
 

@@ -3,10 +3,10 @@
  */
 package com.taomk.study.reflection.InterfacesInfo;
 
-import com.taomk.study.reflection.target.MyObject;
+import com.taomk.study.reflection.TargetObject.MyObject;
 
 /**
- * ·µ»Ø½Ó¿ÚÐÅÏ¢
+ * ï¿½ï¿½ï¿½Ø½Ó¿ï¿½ï¿½ï¿½Ï¢
  * @author taomk
  *
  */
@@ -15,7 +15,7 @@ public class InterfacesInfo {
 	public static void main(String[] args) {
 
 		Class<MyObject> myObjectClass = MyObject.class;
-		// ·µ»Ø½Ó¿ÚÊý×é
+		// ï¿½ï¿½ï¿½Ø½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½
 		Class<?>[] interfaces = myObjectClass.getInterfaces();
 		for (int i = 0; i < interfaces.length; i++) {
 			
