@@ -6,7 +6,7 @@ package com.taomk.study.reflection.ClssLoader;
 import java.net.URL;
 
 /**
- * Java¶¯Ì¬¼ÓÔØÀà
+ * Javaç±»åŠ è½½é€»è¾‘
  * 
  * @author taomk
  *
@@ -16,9 +16,13 @@ public class ClssLoaderInfo {
 	@SuppressWarnings("restriction")
 	public static void main(String[] args) {
 
-		// bootstrap classloader Òıµ¼Àà£¨Ô­Ê¼Àà£©¼ÓÔØÆ÷£¬¸ºÔğ¼ÓÔØJavaµÄºËĞÄÀà£¬Ëü²¢²»ÊÇÒ»¸öÕæÕıµÄclassloader
-		// ÔÚÖ´ĞĞjavaµÄÃüÁîÖĞÊ¹ÓÃ-XbootclasspathÑ¡Ïî»òÕßÊ¹ÓÃ-DÑ¡ÏîÖ¸¶¨sun.boot.class.pathÏµÍ³ÊôĞÔÖµ¿ÉÒÔÖ¸¶¨¸½¼şµÄÀà¡£
-		// JVMÆô¶¯Ê±×Ô¶¯¼ÓÔØµÄºËĞÄÀà¿â
+		/**
+		 * bootstrap classloader ï¼ å¼•å¯¼ï¼ˆä¹Ÿç§°ä¸ºåŸå§‹ï¼‰ç±»åŠ è½½å™¨ã€‚
+		 * å®ƒè´Ÿè´£åŠ è½½Javaçš„æ ¸å¿ƒç±»ã€‚
+		 * åœ¨Sunçš„JVMä¸­ï¼Œåœ¨æ‰§è¡Œjavaçš„å‘½ä»¤ä¸­ä½¿ç”¨-Xbootclasspathé€‰é¡¹æˆ–ä½¿ç”¨-Dé€‰é¡¹æŒ‡å®šsun.boot.class.pathç³»ç»Ÿå±æ€§å€¼å¯ä»¥æŒ‡å®šé™„åŠ çš„ç±»ã€‚
+		 * è¿™ä¸ªåŠ è½½å™¨çš„æ˜¯éå¸¸ç‰¹æ®Šçš„ï¼Œå®ƒå®é™…ä¸Šä¸æ˜¯java.lang.ClassLoaderçš„å­ç±»ï¼Œè€Œæ˜¯ç”±JVMè‡ªèº«å®ç°çš„ã€‚
+		 * 
+		 */
 		URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
 		for (int i = 0; i < urls.length; i++) {
 			System.out.println(urls[i]);
@@ -26,19 +30,30 @@ public class ClssLoaderInfo {
 
 		System.out.println();
 
-		// extension classloader À©Õ¹Àà¼ÓÔØÆ÷£¬¸ºÔğ¼ÓÔØJREµÄÀ©Õ¹Ä¿Â¼ÖĞJAR°ü
+		/**
+		 * 
+		 * extension classloader ï¼ æ‰©å±•ç±»åŠ è½½å™¨ã€‚
+		 * å®ƒè´Ÿè´£åŠ è½½JREçš„æ‰©å±•ç›®å½•ï¼ˆJAVA_HOME/jre/lib/extæˆ–è€…ç”±java.ext.dirsç³»ç»Ÿå±æ€§æŒ‡å®šçš„ï¼‰ä¸­JARçš„ç±»åŒ…ã€‚
+		 * è¿™ä¸ºå¼•å…¥é™¤Javaæ ¸å¿ƒç±»ä»¥å¤–çš„æ–°åŠŸèƒ½æä¾›äº†ä¸€ä¸ªæ ‡å‡†æœºåˆ¶ã€‚
+		 * å› ä¸ºé»˜è®¤çš„æ‰©å±•ç›®å½•å¯¹æ‰€æœ‰ä»åŒä¸€ä¸ªJREä¸­å¯åŠ¨çš„JVMéƒ½æ˜¯é€šç”¨çš„ï¼Œæ‰€ä»¥æ”¾å…¥è¿™ä¸ªç›®å½•çš„JARç±»åŒ…å¯¹æ‰€æœ‰çš„JVMå’Œsystem classloaderéƒ½æ˜¯å¯è§çš„ã€‚
+		 * åœ¨è¿™ä¸ªå®ä¾‹ä¸Šè°ƒç”¨æ–¹æ³•getParent()æ€»æ˜¯è¿”å›ç©ºå€¼nullï¼Œå› ä¸ºå¼•å¯¼åŠ è½½å™¨bootstrap classloaderä¸æ˜¯ä¸€ä¸ªçœŸæ­£çš„ClassLoaderå®ä¾‹ã€‚
+		 */
 		System.out.println(System.getProperty("java.ext.dirs"));
 		ClassLoader extensionClassLoader = ClassLoader.getSystemClassLoader().getParent();
 		System.out.println("The parent of extension classloader : " + extensionClassLoader);
 
 		System.out.println();
 
-		// system classloader
-		// ÏµÍ³£¨Ó¦ÓÃ£©Àà¼ÓÔØÆ÷£¬¸ºÔğÔÚ¸ºÔğÔÚJVMÆô¶¯Ê±£¬¼ÓÔØÀ´×ÔÃüÁîjavaÖĞµÄ-classpath»òÕßjava.class.pathÏµÍ³ÊôĞÔËùÖ¸¶¨µÄJAR°üºÍÀàÂ·¾¶
+		/**
+		 *system classloader ï¼ ç³»ç»Ÿï¼ˆä¹Ÿç§°ä¸ºåº”ç”¨ï¼‰ç±»åŠ è½½å™¨ã€‚
+		 *å®ƒè´Ÿè´£åœ¨JVMè¢«å¯åŠ¨æ—¶ï¼ŒåŠ è½½æ¥è‡ªåœ¨å‘½ä»¤javaä¸­çš„-classpathæˆ–è€…java.class.pathç³»ç»Ÿå±æ€§æˆ–è€…CLASSPATHæ“ä½œç³»ç»Ÿå±æ€§æ‰€æŒ‡å®šçš„JARç±»åŒ…å’Œç±»è·¯å¾„ã€‚
+		 *æ€»èƒ½é€šè¿‡é™æ€æ–¹æ³•ClassLoader.getSystemClassLoader()æ‰¾åˆ°è¯¥ç±»åŠ è½½å™¨ã€‚
+		 *å¦‚æœæ²¡æœ‰ç‰¹åˆ«æŒ‡å®šï¼Œåˆ™ç”¨æˆ·è‡ªå®šä¹‰çš„ä»»ä½•ç±»åŠ è½½å™¨éƒ½å°†è¯¥ç±»åŠ è½½å™¨ä½œä¸ºå®ƒçš„çˆ¶åŠ è½½å™¨ã€‚ 
+		 */
 		System.out.println(System.getProperty("java.class.path"));
-		
+
 		System.out.println();
-		
+
 		System.out.println(System.class.getClassLoader());
 	}
 }
